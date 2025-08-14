@@ -1,5 +1,4 @@
-
-type Effect = 'fade' | 'fade-up' | 'slide-right' | 'slide-left' | 'zoom'
+export type Effect = 'fade' | 'fade-up' | 'slide-right' | 'slide-left' | 'zoom'
 
 const initialTransform = (effect: Effect) => {
   switch (effect) {
@@ -20,7 +19,7 @@ const setupNode = (el: HTMLElement, effect: Effect, delayMs: number) => {
   if (delayMs) el.style.transitionDelay = `${delayMs}ms`
 }
 
-const reveal = (el: HTMLElement, effct: Effect) => {
+const reveal = (el: HTMLElement, _effect: Effect) => {
   el.style.transform = enterTransform
   el.style.opacity = '1'
 }
@@ -35,13 +34,13 @@ export default {
     const effect: Effect = binding.value || 'fade-up'
     const delayAttr = el.getAttribute('data-delay')
     const delayMs = delayAttr ? Number(delayAttr) || 0 : 0
-    const once = el.getAttribute('data-once') === 'true' 
+    const once = el.getAttribute('data-once') === 'true'
 
     setupNode(el, effect, delayMs)
 
     const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             reveal(el, effect)
             if (once) io.unobserve(el)
@@ -53,7 +52,7 @@ export default {
       { threshold: 0.2 }
     )
 
-    // @ts-ignore 
+    // @ts-ignore приватне поле для відв'язки
     el.__revealObserver = io
     io.observe(el)
   },
@@ -62,5 +61,5 @@ export default {
       el.__revealObserver.unobserve(el)
       delete el.__revealObserver
     }
-  },
+  }
 }
