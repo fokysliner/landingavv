@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const TG_URL = 'https://t.me/palpavlovih_sc' 
+const TG_URL = 'https://t.me/manager_avto24' 
 </script>
 
 <template>

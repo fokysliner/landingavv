@@ -12,7 +12,7 @@ import CounterStat from '@/components/CounterStat.vue'
 import bgReviews from '@/assets/bg-reviews-red-contrast.png'
 import TelegramButton from '@/components/TelegramButton.vue' 
 
-const TG_URL = 'https://t.me/palpavlovih_sc' 
+const TG_URL = 'https://t.me/manager_avto24' 
 
 const { latestApproved } = useReviews()
 const year = new Date().getFullYear()
@@ -319,7 +319,7 @@ const posts = [
 
     <ScrollReveal effect="slide-right" :delay="220">
       <a
-        href="https://t.me/palpavlovih_sc"
+        href="https://t.me/manager_avto24"
         target="_blank"
         rel="noopener noreferrer"
         class="btn-glass inline-flex items-center gap-3 px-8 py-4 rounded-2xl text-lg font-semibold"
@@ -351,7 +351,7 @@ const posts = [
 
     <div class="flex justify-start md:justify-end gap-3">
       <a
-        href="https://t.me/palpavlovih_sc"
+        href="https://t.me/manager_avto24"
         target="_blank"
         rel="noopener noreferrer"
         class="social-btn"
