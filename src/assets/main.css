@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+}
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-600 text-white font-semibold shadow-soft hover:bg-brand-700 transition;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-3 rounded-2xl border-2 border-brand-600 text-brand-700 hover:bg-brand-50 transition;
+  }
+  .card {
+    @apply rounded-2xl bg-white border border-gray-200 shadow-soft;
+  }
+  .section {
+    @apply py-16 sm:py-24;
+  }
+}
+@layer base { html{scroll-behavior:smooth} }
+
+@layer components {
+  .btn-primary{@apply inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-600 text-white font-semibold shadow-lg hover:bg-brand-700 transition;}
+  .btn-outline{@apply inline-flex items-center gap-2 px-5 py-3 rounded-2xl border-2 border-brand-600 text-brand-700 hover:bg-brand-50 transition;}
+  .card{@apply rounded-2xl bg-white border border-gray-200 shadow-lg;}
+  .section{@apply py-16 sm:py-24;}
+}
+
+.reveal{opacity:0;transform:translateY(8px);will-change:opacity,transform;transition:opacity .7s ease,transform .7s ease,filter .7s ease;}
+.reveal-active{opacity:1;transform:none;filter:none;}
+.reveal-slide-up{transform:translateY(18px)}
+.reveal-slide-right{transform:translateX(-24px)}
+.reveal-zoom{transform:scale(.97)}
+.reveal-skew{transform:skewY(3deg); }
+@tailwind base; @tailwind components; @tailwind utilities;
+
+@layer base { html{scroll-behavior:smooth} }
+@layer components{
+  .btn-primary{@apply inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-brand-500 text-white font-semibold shadow-soft hover:bg-brand-600 active:scale-[.98] transition;}
+  .btn-outline{@apply inline-flex items-center gap-2 px-6 py-3 rounded-2xl border-2 border-brand-500 text-brand-300 hover:bg-brand-500/10 transition;}
+  .chip{@apply inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white border border-white/20;}
+  .card{@apply rounded-2xl bg-zinc-900/70 border border-white/10 backdrop-blur;}
+  .section{@apply py-16 sm:py-24;}
+}
+
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .7s ease,transform .7s ease,filter .7s}
+.reveal-active{opacity:1;transform:none}
+.reveal-slide-up{transform:translateY(18px)}
+.reveal-slide-right{transform:translateX(-24px)}
+.reveal-zoom{transform:scale(.97)}
+.reveal-skew{transform:skewY(3deg)}
+@keyframes slowZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 20s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.bg-about {
+  @apply bg-cover bg-center;
+  background-image: url('@/assets/bg-about.png');
+}
+@keyframes zoomInOut {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.animate-zoom {
+  animation: zoomInOut 15s ease-in-out infinite;
+}
+@keyframes zoomSlow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-zoom-slow {
+  animation: zoomSlow 20s ease-in-out infinite;
+}
+@keyframes zoomSlow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-zoom-slow {
+  animation: zoomSlow 20s ease-in-out infinite;
+}
+
+@keyframes underline {
+  to { width: 100%; }
+}
+
+.animate-underline {
+  animation: underline 1s ease forwards;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section { @apply py-16 sm:py-20; }
+
+.card { @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg; }
+.btn-primary { @apply inline-flex items-center gap-2 rounded-xl bg-brand-500 px-4 py-2 font-semibold text-white hover:bg-brand-400 transition; }
+.btn-outline { @apply inline-flex items-center gap-2 rounded-xl border border-brand-500/40 px-4 py-2 text-white/90 hover:bg-white/5 transition; }
+.chip { @apply inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs text-white/70; }
+
+
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-in-out;
+}
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+@keyframes slow-pan {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-2%); }
+  100% { transform: translateX(0); }
+}
+@keyframes soft-fade { from { opacity: 0 } to { opacity: 1 } }
+.animate-soft-fade { animation: soft-fade .8s ease-out both }
+
+@keyframes pan-slow {
+  0%   { transform: translate3d(0, -1%, 0) }
+  100% { transform: translate3d(0, 1%, 0) }
+}
+.animate-pan-slow { animation: pan-slow 14s ease-in-out infinite alternate }
+
+.review-tilt { transform: translateY(0) scale(1); }
+.review-tilt:hover { transform: translateY(-4px) scale(1.01); }
+.btn-glass {
+  color: #fff;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 10px 25px rgba(255, 61, 61, 0.15),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+  transition: transform .2s ease, box-shadow .25s ease, background .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glass::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(80% 50% at 20% 20%, rgba(255,95,90,.22), transparent 60%),
+    radial-gradient(80% 50% at 80% 80%, rgba(255,95,90,.18), transparent 60%);
+  opacity:.35;
+  pointer-events:none;
+  animation: glowPulse 3.5s ease-in-out infinite;
+}
+
+.btn-glass::before{
+  content:"";
+  position:absolute; top:-120%; left:-30%;
+  width:60%; height:340%;
+  transform: rotate(25deg);
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.55) 50%, transparent 100%);
+  opacity:0;
+}
+.btn-glass:hover::before{
+  animation: shimmer 1.3s ease;
+  opacity: .55;
+}
+.btn-glass:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 32px rgba(255, 61, 61, 0.22),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.08);
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-120%) rotate(25deg); }
+  100% { transform: translateX(220%)  rotate(25deg); }
+}
+@keyframes glowPulse {
+  0%,100% { opacity:.25; }
+  50%     { opacity:.5;  }
+}
+
+.animated-title{
+  background: linear-gradient(90deg, #fff 0%, #fff 40%, #ff7a75 55%, #fff 70%, #fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: titleSheen 4.2s ease-in-out infinite;
+  text-shadow: 0 2px 18px rgba(255, 60, 60, 0.12);
+}
+@keyframes titleSheen {
+  0%   { background-position: 0% 50%;   }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%;   }
+}
+.footer-link {
+  @apply text-white/70 hover:text-white transition-colors;
+  position: relative;
+}
+.footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 0%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,90,89,.9) 60%, rgba(255,255,255,0) 100%);
+  transition: width .25s ease;
+}
+.footer-link:hover::after { width: 100%; }
+
+.social-btn {
+  @apply relative inline-flex items-center justify-center rounded-full p-2 text-white/80 transition;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 6px 24px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter: blur(6px);
+}
+.social-btn:hover {
+  @apply text-white;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(255,90,89,.25), inset 0 1px 0 rgba(255,255,255,.08);
+}
