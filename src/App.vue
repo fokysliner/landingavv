@@ -353,7 +353,7 @@ const posts = [
 
     <div class="flex justify-start md:justify-end gap-3">
 <a
-  href="https://t.me/palpavlovih_sc"
+  href="https://t.me/manager_avto24"
   target="_blank"
   rel="noopener noreferrer"
   class="social-btn tg-btn"
